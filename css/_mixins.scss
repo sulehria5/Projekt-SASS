@@ -1,0 +1,14 @@
+@import '_variables';
+@mixin bg {
+    background-image: linear-gradient(61deg, $color1 12.50%, $color2 12.50%, $color2 25%, $color3 25%, $color3 37.50%, $color4 37.50%, $color4 50%, $color1 50%, $color1 62.50%, $color2 62.50%, $color2 75%, $color3 75%, $color3 87.50%, $color4 87.50%, $color4 100%);
+}
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+@mixin display-flex($direction,$justify,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

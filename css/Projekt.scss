@@ -1,0 +1,88 @@
+@import '_variables';
+@import '_mixin';
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.Home{
+    position: relative;
+    @include size(100vw,100vh);
+    @include bg;
+    @include display-flex(column,center,center);
+        h1{
+            background-color: yellow;
+            @include size(15vw,15vw);
+            @include display-flex(row,center,center);
+            border-radius: 50%;
+            font-size: 6em;
+            color: #fff;
+            position: absolute;
+            top:22%;
+            right: 20%;  
+        }
+        h2{
+            font-size: 15em;
+            color: #fff;
+        }
+    
+
+       
+        nav{
+            position: absolute;
+            top: 90vh;
+            right: 2vw;
+            ul{
+                li{ 
+                    list-style-type: none;
+                    display: inline;
+                    a{
+                        color:$a-color;
+                        margin-right: 2vw;
+                    }
+                }
+            }
+        }
+    
+}
+.About{
+    @include display-flex(row,space-around,center);
+    margin: 5vh 5vw; 
+    article{
+        @include size(50vw,50vh);
+        @include display-flex(column,center,baseline);
+        button{
+            @include size(30vw,4vh);
+            margin-top: 2vh;
+            margin-left: 4vw;
+            background-color: $button-bg-color;
+            color: $button-color;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        p{
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            margin-left: 8vw;
+            color: rgb(197, 192, 192);
+        }
+        h1{
+            margin-left: 8vw;
+        }
+        img{
+            @include size(40vw,50vh);
+        }
+    }
+}
+.Services{
+   @extend .About; 
+}
+.Footer{
+    @include bg;
+    @include size(100vw,10vh);
+    @include display-flex(row,center,center);
+    p{
+        color:white;
+    }
+}
